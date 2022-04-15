@@ -29,6 +29,7 @@ public class WordManager : MonoBehaviour
     {
         for (int i = 0; i < 6; i++)
             SetLetterStackColor(i, ColorManager.GetCorrectPlace());
+        Debug.Log("Color change");
     }
 
     public void AddStackLetter(string letter)

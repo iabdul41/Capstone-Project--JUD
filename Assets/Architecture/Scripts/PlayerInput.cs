@@ -35,10 +35,21 @@ public class PlayerInput : MonoBehaviour
         KeyCode.Z,
     };
 
+    //Audio source
+    AudioSource audioS;
+    public AudioClip tapSound;
+
+    private void Start()
+    {
+        audioS = Camera.main.GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (Input.anyKeyDown)
         {
+            audioS.PlayOneShot(tapSound);
+
             if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKeyDown(KeyCode.Backspace))
                 DeleteLetter();
             else
