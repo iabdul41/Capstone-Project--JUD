@@ -11,6 +11,16 @@ public class UIHandler : MonoBehaviour
     [SerializeField] GameObject GameLost;
     [SerializeField] TextMeshProUGUI GameLostText;
 
+    //Audio source
+    AudioSource audioS;
+    public AudioClip gameLossAudio;
+    public AudioClip gameWonAudio;
+
+    private void Start()
+    {
+        audioS = Camera.main.GetComponent<AudioSource>();
+    }
+
     public void DisplayIncompleteWord()
     {
         incompleteWord.SetActive(true);
@@ -24,11 +34,15 @@ public class UIHandler : MonoBehaviour
     public void DisplayGameWon()
     {
         GameWon.SetActive(true);
+
+        audioS.PlayOneShot(gameWonAudio);
     }
 
     public void DisplayGameLost(string word)
     {
         GameLostText.text = "Word: " + word;
         GameLost.SetActive(true);
+
+        audioS.PlayOneShot(gameLossAudio);
     }
 }

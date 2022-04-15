@@ -712,6 +712,8 @@ MonoBehaviour:
   GameWon: {fileID: 1506090602}
   GameLost: {fileID: 877906406}
   GameLostText: {fileID: 2118502272}
+  gameLossAudio: {fileID: 8300000, guid: d70cf50b401ebe34fbcbc11aea4b3f1b, type: 3}
+  gameWonAudio: {fileID: 8300000, guid: 1727098a1de7d324b98ab784ac9d3b13, type: 3}
 --- !u!4 &431566311
 Transform:
   m_ObjectHideFlags: 0
@@ -1441,7 +1443,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 0}
+  m_BackGroundColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1500,7 +1502,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 956ad2f73332544fd87365087825cc4f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2207,6 +2209,7 @@ MonoBehaviour:
   - {fileID: 1319817265}
   - {fileID: 660588199}
   - {fileID: 1736251769}
+  nextTryAudio: {fileID: 8300000, guid: 5ed9970e17bfee943a6dff056dc3a9d0, type: 3}
 --- !u!1 &1430665654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b3a9b418790499ba050af03b0df280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDaily: 1
+  isDaily: 0
   correctGuessWord: 
 --- !u!4 &1430665656
 Transform:

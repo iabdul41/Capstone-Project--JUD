@@ -6,7 +6,6 @@ public class WordReader : MonoBehaviour
 {
     public static WordReader Instance;
     [SerializeField] TextAsset correctWordText;
-    //[SerializeField] TextAsset correctGuessText;
 
     List<string> correctWord;
     List<string> correctGuess;
@@ -20,14 +19,13 @@ public class WordReader : MonoBehaviour
     void LoadFiles()
     {
         correctWord = WordList.GetStrings(correctWordText);
-        //correctGuess = WordBank.GetStrings(correctGuessText);
     }
 
     //Check if the word is in the WordBank
 
     public bool IsWordValid(string word)
     {
-        return correctWord.Contains(word);// || correctGuessWords.Contains(word);
+        return correctWord.Contains(word);
     }
 
     //Pick a random word when game starts

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ResetTime : MonoBehaviour
 {
     [SerializeField]float time = 1;
+
+    //Time to display pop up message
     private void OnEnable()
     {
         Invoke("Disable", time);

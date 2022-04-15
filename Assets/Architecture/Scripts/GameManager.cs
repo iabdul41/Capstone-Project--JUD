@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     WordManager wordManager;
 
     //Audio source
-    AudioSource audio;
+    AudioSource audioS;
 
 
     // Start is called before the first frame update
@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
 
         LetsPLay();
 
-        audio = Camera.main.GetComponent<AudioSource>();
-        audio.Play();
+        audioS = Camera.main.GetComponent<AudioSource>();
+        audioS.Play();
     }
 
     void LetsPLay()

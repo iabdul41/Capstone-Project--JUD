@@ -48,6 +48,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+            //To play sound on each word tap
             audioS.PlayOneShot(tapSound);
 
             if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKeyDown(KeyCode.Backspace))

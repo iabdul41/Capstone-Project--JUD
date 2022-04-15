@@ -8,12 +8,23 @@ public class WordManager : MonoBehaviour
 
     int letterIndex = 0;
     int wordIndex = 0;
-    
+
+    //Audio source
+    AudioSource audioS;
+    public AudioClip nextTryAudio;
+
+    private void Start()
+    {
+        audioS = Camera.main.GetComponent<AudioSource>();
+
+    }
 
     public void NextStack()
     {
         letterIndex = 0;
         wordIndex++;
+
+        audioS.PlayOneShot(nextTryAudio);
     }
 
     public void ClearStack()
@@ -29,13 +40,13 @@ public class WordManager : MonoBehaviour
     {
         for (int i = 0; i < 6; i++)
             SetLetterStackColor(i, ColorManager.GetCorrectPlace());
-        Debug.Log("Color change");
     }
 
     public void AddStackLetter(string letter)
     {
         wordStackList[wordIndex].SetLetterStackText(letterIndex, letter.ToUpper());
         letterIndex++;
+
     }
     public void DeleteLastStackLetter()
     {
